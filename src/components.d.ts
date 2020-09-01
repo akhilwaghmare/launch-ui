@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LuiAlert {
+        "accent": boolean;
         "type": string;
     }
     interface LuiButton {
@@ -55,6 +56,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LuiAlert {
+        "accent"?: boolean;
         "type"?: string;
     }
     interface LuiButton {

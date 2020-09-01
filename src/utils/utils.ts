@@ -35,7 +35,7 @@ export function getStyle(styleCode: string): { primaryColor: string; secondaryCo
       secondaryColor = '--lui-color-white';
       break;
     default:
-      primaryColor = '--lui-color-light';
+      primaryColor = '--lui-color-gray';
       secondaryColor = '--lui-color-dark';
       break;
   }
