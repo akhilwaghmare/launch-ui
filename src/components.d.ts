@@ -18,6 +18,13 @@ export namespace Components {
         "center": boolean;
         "fluid": boolean;
     }
+    interface LuiFlex {
+        "alignContent": string;
+        "alignItems": string;
+        "direction": string;
+        "justifyContent": string;
+        "wrap": string;
+    }
 }
 declare global {
     interface HTMLLuiAlertElement extends Components.LuiAlert, HTMLStencilElement {
@@ -38,10 +45,17 @@ declare global {
         prototype: HTMLLuiContainerElement;
         new (): HTMLLuiContainerElement;
     };
+    interface HTMLLuiFlexElement extends Components.LuiFlex, HTMLStencilElement {
+    }
+    var HTMLLuiFlexElement: {
+        prototype: HTMLLuiFlexElement;
+        new (): HTMLLuiFlexElement;
+    };
     interface HTMLElementTagNameMap {
         "lui-alert": HTMLLuiAlertElement;
         "lui-button": HTMLLuiButtonElement;
         "lui-container": HTMLLuiContainerElement;
+        "lui-flex": HTMLLuiFlexElement;
     }
 }
 declare namespace LocalJSX {
@@ -57,10 +71,18 @@ declare namespace LocalJSX {
         "center"?: boolean;
         "fluid"?: boolean;
     }
+    interface LuiFlex {
+        "alignContent"?: string;
+        "alignItems"?: string;
+        "direction"?: string;
+        "justifyContent"?: string;
+        "wrap"?: string;
+    }
     interface IntrinsicElements {
         "lui-alert": LuiAlert;
         "lui-button": LuiButton;
         "lui-container": LuiContainer;
+        "lui-flex": LuiFlex;
     }
 }
 export { LocalJSX as JSX };
@@ -70,6 +92,7 @@ declare module "@stencil/core" {
             "lui-alert": LocalJSX.LuiAlert & JSXBase.HTMLAttributes<HTMLLuiAlertElement>;
             "lui-button": LocalJSX.LuiButton & JSXBase.HTMLAttributes<HTMLLuiButtonElement>;
             "lui-container": LocalJSX.LuiContainer & JSXBase.HTMLAttributes<HTMLLuiContainerElement>;
+            "lui-flex": LocalJSX.LuiFlex & JSXBase.HTMLAttributes<HTMLLuiFlexElement>;
         }
     }
 }
