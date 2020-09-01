@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+:host(.center) {
+  margin: 0 auto;
+}
+
+:host(.fluid) {
+  max-width: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+  :host {
+    max-width: 540px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    max-width: 720px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  :host {
+    max-width: 960px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  :host {
+    max-width: 1140px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  :host {
+    max-width: 1320px;
+  }
+}

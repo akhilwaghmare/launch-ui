@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>LaunchUI Demo</title>
     <link rel="stylesheet" href="/build/launch-ui.css" />
     <script type="module" src="/build/launch-ui.esm.js"></script>
     <script nomodule src="/build/launch-ui.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-    <h1>Alert</h1>
+    <h1>Components</h1>
+    <h3>Alert</h3>
     <lui-alert>This is a default alert.</lui-alert>
     <lui-alert type="primary">This is a primary alert.</lui-alert>
     <lui-alert type="success">This is a success alert.</lui-alert>
@@ -22,7 +22,7 @@
     <lui-alert type="success" accent>This is a success alert.</lui-alert>
     <lui-alert type="danger" accent>This is a danger alert.</lui-alert>
     <lui-alert type="warning" accent>This is a warning alert.</lui-alert>
-    <h1>Button</h1>
+    <h3>Button</h3>
     <lui-button>Default</lui-button>
     <lui-button type="primary">Primary</lui-button>
     <lui-button type="success">Success</lui-button>
@@ -34,5 +34,14 @@
     <lui-button type="success" ghost>Success</lui-button>
     <lui-button type="danger" ghost>Danger</lui-button>
     <lui-button type="warning" ghost>Warning</lui-button>
+
+    <h1>Layout</h1>
+    <h3>Container</h3>
+    <lui-container center>
+      <div style="background-color: lightgreen; width: 100%; height: 200px; margin-bottom: 24px">Standard responsive container</div>
+    </lui-container>
+    <lui-container center fluid>
+      <div style="background-color: lightgreen; width: 100%; height: 200px">Responsive fluid container</div>
+    </lui-container>
   </body>
 </html>

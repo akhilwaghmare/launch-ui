@@ -1,9 +1,15 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'launch-ui',
   taskQueue: 'async',
   globalStyle: 'src/global/variables.css',
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/global/breakpoints.scss'],
+    }),
+  ],
   outputTargets: [
     {
       type: 'dist',

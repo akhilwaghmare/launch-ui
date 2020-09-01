@@ -14,19 +14,9 @@ export namespace Components {
         "ghost": boolean;
         "type": string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface LuiContainer {
+        "center": boolean;
+        "fluid": boolean;
     }
 }
 declare global {
@@ -42,16 +32,16 @@ declare global {
         prototype: HTMLLuiButtonElement;
         new (): HTMLLuiButtonElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLLuiContainerElement extends Components.LuiContainer, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLLuiContainerElement: {
+        prototype: HTMLLuiContainerElement;
+        new (): HTMLLuiContainerElement;
     };
     interface HTMLElementTagNameMap {
         "lui-alert": HTMLLuiAlertElement;
         "lui-button": HTMLLuiButtonElement;
-        "my-component": HTMLMyComponentElement;
+        "lui-container": HTMLLuiContainerElement;
     }
 }
 declare namespace LocalJSX {
@@ -63,24 +53,14 @@ declare namespace LocalJSX {
         "ghost"?: boolean;
         "type"?: string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface LuiContainer {
+        "center"?: boolean;
+        "fluid"?: boolean;
     }
     interface IntrinsicElements {
         "lui-alert": LuiAlert;
         "lui-button": LuiButton;
-        "my-component": MyComponent;
+        "lui-container": LuiContainer;
     }
 }
 export { LocalJSX as JSX };
@@ -89,7 +69,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "lui-alert": LocalJSX.LuiAlert & JSXBase.HTMLAttributes<HTMLLuiAlertElement>;
             "lui-button": LocalJSX.LuiButton & JSXBase.HTMLAttributes<HTMLLuiButtonElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "lui-container": LocalJSX.LuiContainer & JSXBase.HTMLAttributes<HTMLLuiContainerElement>;
         }
     }
 }
