@@ -30,6 +30,18 @@ export class LuiButton {
         primaryColor = '--lui-color-primary';
         secondaryColor = '--lui-color-white';
         break;
+      case Style.Success:
+        primaryColor = '--lui-color-success';
+        secondaryColor = '--lui-color-white';
+        break;
+      case Style.Danger:
+        primaryColor = '--lui-color-danger';
+        secondaryColor = '--lui-color-white';
+        break;
+      case Style.Warning:
+        primaryColor = '--lui-color-warning';
+        secondaryColor = '--lui-color-white';
+        break;
       default:
         primaryColor = '--lui-color-dark';
         secondaryColor = '--lui-color-light';
