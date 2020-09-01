@@ -1,0 +1,13 @@
+:root {
+  --lui-color-primary: rgb(0, 157, 255);
+  --lui-color-secondary: rgb(108, 117, 125);
+  --lui-color-success: rgb(68, 217, 38);
+  --lui-color-danger: rgb(249, 47, 6);
+  --lui-color-warning: rgb(242, 166, 13);
+  --lui-color-info: rgb(115, 130, 140);
+  --lui-color-light: rgb(248, 249, 250);
+  --lui-color-dark: rgb(52, 58, 64);
+  --lui-color-white: rgb(255, 255, 255);
+  --lui-color-black: rgb(0, 0, 0);
+  --lui-color-transparent: rgba(0, 0, 0, 0);
+}
