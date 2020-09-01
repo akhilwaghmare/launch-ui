@@ -2,25 +2,16 @@ import { Component, Prop, h } from '@stencil/core';
 import { getStyle } from '../../utils/utils';
 
 @Component({
-  tag: 'lui-button',
-  styleUrl: 'lui-button.css',
+  tag: 'lui-alert',
+  styleUrl: 'lui-alert.css',
   shadow: true,
 })
-export class LuiButton {
+export class LuiAlert {
   // Properties
   @Prop() type: string = 'default';
-  @Prop() ghost: boolean;
 
-  private buttonStyle(): any {
+  private alertStyle(): any {
     var selectedStyle = getStyle(this.type);
-
-    if (this.ghost) {
-      return {
-        backgroundColor: `var(--lui-color-transparent)`,
-        color: `var(${selectedStyle.primaryColor})`,
-        borderColor: `var(${selectedStyle.primaryColor})`,
-      };
-    }
 
     return {
       backgroundColor: `var(${selectedStyle.primaryColor})`,
@@ -31,9 +22,9 @@ export class LuiButton {
 
   render() {
     return (
-      <button style={this.buttonStyle()}>
+      <div style={this.alertStyle()}>
         <slot></slot>
-      </button>
+      </div>
     );
   }
 }

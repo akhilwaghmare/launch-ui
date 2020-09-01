@@ -6,9 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LuiAlert {
+        "type": string;
+    }
     interface LuiButton {
         "ghost": boolean;
-        "presetStyle": string;
+        "type": string;
     }
     interface MyComponent {
         /**
@@ -26,6 +29,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLLuiAlertElement extends Components.LuiAlert, HTMLStencilElement {
+    }
+    var HTMLLuiAlertElement: {
+        prototype: HTMLLuiAlertElement;
+        new (): HTMLLuiAlertElement;
+    };
     interface HTMLLuiButtonElement extends Components.LuiButton, HTMLStencilElement {
     }
     var HTMLLuiButtonElement: {
@@ -39,14 +48,18 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "lui-alert": HTMLLuiAlertElement;
         "lui-button": HTMLLuiButtonElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface LuiAlert {
+        "type"?: string;
+    }
     interface LuiButton {
         "ghost"?: boolean;
-        "presetStyle"?: string;
+        "type"?: string;
     }
     interface MyComponent {
         /**
@@ -63,6 +76,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "lui-alert": LuiAlert;
         "lui-button": LuiButton;
         "my-component": MyComponent;
     }
@@ -71,6 +85,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "lui-alert": LocalJSX.LuiAlert & JSXBase.HTMLAttributes<HTMLLuiAlertElement>;
             "lui-button": LocalJSX.LuiButton & JSXBase.HTMLAttributes<HTMLLuiButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
