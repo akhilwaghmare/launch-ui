@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+
+  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+
+  /* Default Colors */
+  background-color: var(--lui-color-dark);
+  color: var(--lui-color-light);
+  border: solid 1px var(--lui-color-dark);
+}
