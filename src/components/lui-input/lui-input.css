@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  border: 1px solid var(--lui-color-gray);
+  border-radius: 0.125rem;
+  padding: 0.25rem 0.75rem;
+}
+
+:host(.focus) {
+  outline-style: auto;
+  outline-color: rgb(0, 103, 244);
+  outline-width: 3px;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+}

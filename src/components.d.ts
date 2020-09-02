@@ -34,6 +34,9 @@ export namespace Components {
         "vgutter": number;
         "wrap": string;
     }
+    interface LuiInput {
+        "placeholder": string;
+    }
 }
 declare global {
     interface HTMLLuiAlertElement extends Components.LuiAlert, HTMLStencilElement {
@@ -72,6 +75,12 @@ declare global {
         prototype: HTMLLuiFlexElement;
         new (): HTMLLuiFlexElement;
     };
+    interface HTMLLuiInputElement extends Components.LuiInput, HTMLStencilElement {
+    }
+    var HTMLLuiInputElement: {
+        prototype: HTMLLuiInputElement;
+        new (): HTMLLuiInputElement;
+    };
     interface HTMLElementTagNameMap {
         "lui-alert": HTMLLuiAlertElement;
         "lui-badge": HTMLLuiBadgeElement;
@@ -79,6 +88,7 @@ declare global {
         "lui-card": HTMLLuiCardElement;
         "lui-container": HTMLLuiContainerElement;
         "lui-flex": HTMLLuiFlexElement;
+        "lui-input": HTMLLuiInputElement;
     }
 }
 declare namespace LocalJSX {
@@ -110,6 +120,9 @@ declare namespace LocalJSX {
         "vgutter"?: number;
         "wrap"?: string;
     }
+    interface LuiInput {
+        "placeholder"?: string;
+    }
     interface IntrinsicElements {
         "lui-alert": LuiAlert;
         "lui-badge": LuiBadge;
@@ -117,6 +130,7 @@ declare namespace LocalJSX {
         "lui-card": LuiCard;
         "lui-container": LuiContainer;
         "lui-flex": LuiFlex;
+        "lui-input": LuiInput;
     }
 }
 export { LocalJSX as JSX };
@@ -129,6 +143,7 @@ declare module "@stencil/core" {
             "lui-card": LocalJSX.LuiCard & JSXBase.HTMLAttributes<HTMLLuiCardElement>;
             "lui-container": LocalJSX.LuiContainer & JSXBase.HTMLAttributes<HTMLLuiContainerElement>;
             "lui-flex": LocalJSX.LuiFlex & JSXBase.HTMLAttributes<HTMLLuiFlexElement>;
+            "lui-input": LocalJSX.LuiInput & JSXBase.HTMLAttributes<HTMLLuiInputElement>;
         }
     }
 }
