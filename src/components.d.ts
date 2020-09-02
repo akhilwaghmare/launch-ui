@@ -18,6 +18,8 @@ export namespace Components {
         "ghost": boolean;
         "type": string;
     }
+    interface LuiCard {
+    }
     interface LuiContainer {
         "center": boolean;
         "fluid": boolean;
@@ -52,6 +54,12 @@ declare global {
         prototype: HTMLLuiButtonElement;
         new (): HTMLLuiButtonElement;
     };
+    interface HTMLLuiCardElement extends Components.LuiCard, HTMLStencilElement {
+    }
+    var HTMLLuiCardElement: {
+        prototype: HTMLLuiCardElement;
+        new (): HTMLLuiCardElement;
+    };
     interface HTMLLuiContainerElement extends Components.LuiContainer, HTMLStencilElement {
     }
     var HTMLLuiContainerElement: {
@@ -68,6 +76,7 @@ declare global {
         "lui-alert": HTMLLuiAlertElement;
         "lui-badge": HTMLLuiBadgeElement;
         "lui-button": HTMLLuiButtonElement;
+        "lui-card": HTMLLuiCardElement;
         "lui-container": HTMLLuiContainerElement;
         "lui-flex": HTMLLuiFlexElement;
     }
@@ -84,6 +93,8 @@ declare namespace LocalJSX {
     interface LuiButton {
         "ghost"?: boolean;
         "type"?: string;
+    }
+    interface LuiCard {
     }
     interface LuiContainer {
         "center"?: boolean;
@@ -103,6 +114,7 @@ declare namespace LocalJSX {
         "lui-alert": LuiAlert;
         "lui-badge": LuiBadge;
         "lui-button": LuiButton;
+        "lui-card": LuiCard;
         "lui-container": LuiContainer;
         "lui-flex": LuiFlex;
     }
@@ -114,6 +126,7 @@ declare module "@stencil/core" {
             "lui-alert": LocalJSX.LuiAlert & JSXBase.HTMLAttributes<HTMLLuiAlertElement>;
             "lui-badge": LocalJSX.LuiBadge & JSXBase.HTMLAttributes<HTMLLuiBadgeElement>;
             "lui-button": LocalJSX.LuiButton & JSXBase.HTMLAttributes<HTMLLuiButtonElement>;
+            "lui-card": LocalJSX.LuiCard & JSXBase.HTMLAttributes<HTMLLuiCardElement>;
             "lui-container": LocalJSX.LuiContainer & JSXBase.HTMLAttributes<HTMLLuiContainerElement>;
             "lui-flex": LocalJSX.LuiFlex & JSXBase.HTMLAttributes<HTMLLuiFlexElement>;
         }

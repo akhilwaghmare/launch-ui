@@ -58,6 +58,28 @@
     <lui-button type="danger" ghost>Danger</lui-button>
     <lui-button type="warning" ghost>Warning</lui-button>
 
+    <h3>Card</h3>
+    <lui-flex justify-content="space-bewteen" hgutter="24">
+      <lui-card style="width: 100%">
+        <div slot="content">
+          <h3>Card Title</h3>
+          <h5>Card Subtitle</h5>
+          <p>Card body text</p>
+          <lui-button type="primary">Click me</lui-button>
+        </div>
+      </lui-card>
+      <lui-card style="width: 100%">
+        <div slot="header"><h3>Card Title</h3></div>
+        <div slot="content">
+          <h5>Card Subtitle</h5>
+          <p>Card body text</p>
+        </div>
+        <div slot="footer">
+          <lui-button type="primary">Click me</lui-button>
+        </div>
+      </lui-card>
+    </lui-flex>
+
     <h1>Layout</h1>
     <h3>Responsive Container</h3>
     <lui-container center>
