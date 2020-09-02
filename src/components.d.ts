@@ -22,7 +22,10 @@ export namespace Components {
         "alignContent": string;
         "alignItems": string;
         "direction": string;
+        "gutter": number;
+        "hgutter": number;
         "justifyContent": string;
+        "vgutter": number;
         "wrap": string;
     }
 }
@@ -75,7 +78,10 @@ declare namespace LocalJSX {
         "alignContent"?: string;
         "alignItems"?: string;
         "direction"?: string;
+        "gutter"?: number;
+        "hgutter"?: number;
         "justifyContent"?: string;
+        "vgutter"?: number;
         "wrap"?: string;
     }
     interface IntrinsicElements {

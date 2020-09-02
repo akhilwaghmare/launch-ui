@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+}
+
+::slotted(*) {
+  margin-right: var(--h-gutter);
+  margin-bottom: var(--v-gutter);
+}
+
+::slotted(*:last-child) {
+  margin-right: 0;
+  margin-bottom: 0;
+}
