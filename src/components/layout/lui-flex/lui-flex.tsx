@@ -39,7 +39,7 @@ export class LuiFlex {
   render() {
     return (
       <Host style={this.flexStyle()}>
-        <slot></slot>
+        <slot />
       </Host>
     );
   }

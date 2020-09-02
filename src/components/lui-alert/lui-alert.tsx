@@ -37,7 +37,7 @@ export class LuiAlert {
   render() {
     return (
       <div style={this.alertStyle()}>
-        <slot></slot>
+        <slot />
       </div>
     );
   }

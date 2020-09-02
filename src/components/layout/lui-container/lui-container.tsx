@@ -17,7 +17,7 @@ export class LuiContainer {
           fluid: this.fluid,
         }}
       >
-        <slot></slot>
+        <slot />
       </Host>
     );
   }

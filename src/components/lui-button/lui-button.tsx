@@ -32,7 +32,7 @@ export class LuiButton {
   render() {
     return (
       <button style={this.buttonStyle()}>
-        <slot></slot>
+        <slot />
       </button>
     );
   }

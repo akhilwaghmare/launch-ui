@@ -10,6 +10,10 @@ export namespace Components {
         "accent": boolean;
         "type": string;
     }
+    interface LuiBadge {
+        "pill": boolean;
+        "type": string;
+    }
     interface LuiButton {
         "ghost": boolean;
         "type": string;
@@ -36,6 +40,12 @@ declare global {
         prototype: HTMLLuiAlertElement;
         new (): HTMLLuiAlertElement;
     };
+    interface HTMLLuiBadgeElement extends Components.LuiBadge, HTMLStencilElement {
+    }
+    var HTMLLuiBadgeElement: {
+        prototype: HTMLLuiBadgeElement;
+        new (): HTMLLuiBadgeElement;
+    };
     interface HTMLLuiButtonElement extends Components.LuiButton, HTMLStencilElement {
     }
     var HTMLLuiButtonElement: {
@@ -56,6 +66,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "lui-alert": HTMLLuiAlertElement;
+        "lui-badge": HTMLLuiBadgeElement;
         "lui-button": HTMLLuiButtonElement;
         "lui-container": HTMLLuiContainerElement;
         "lui-flex": HTMLLuiFlexElement;
@@ -64,6 +75,10 @@ declare global {
 declare namespace LocalJSX {
     interface LuiAlert {
         "accent"?: boolean;
+        "type"?: string;
+    }
+    interface LuiBadge {
+        "pill"?: boolean;
         "type"?: string;
     }
     interface LuiButton {
@@ -86,6 +101,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "lui-alert": LuiAlert;
+        "lui-badge": LuiBadge;
         "lui-button": LuiButton;
         "lui-container": LuiContainer;
         "lui-flex": LuiFlex;
@@ -96,6 +112,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "lui-alert": LocalJSX.LuiAlert & JSXBase.HTMLAttributes<HTMLLuiAlertElement>;
+            "lui-badge": LocalJSX.LuiBadge & JSXBase.HTMLAttributes<HTMLLuiBadgeElement>;
             "lui-button": LocalJSX.LuiButton & JSXBase.HTMLAttributes<HTMLLuiButtonElement>;
             "lui-container": LocalJSX.LuiContainer & JSXBase.HTMLAttributes<HTMLLuiContainerElement>;
             "lui-flex": LocalJSX.LuiFlex & JSXBase.HTMLAttributes<HTMLLuiFlexElement>;
